@@ -1,10 +1,5 @@
-
-
-[[redirects]]
-  from = "/.netlify/identity/*"
-  to = "/admin"
-  status = 200
-  force = true
+[build]
+  publish = "public"  # ou le dossier où se trouve ton site
 
 [[redirects]]
   from = "/admin/*"
