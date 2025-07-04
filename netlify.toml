@@ -13,6 +13,12 @@
   force = false
 
 [[redirects]]
+  from = "/admin/config.yml"
+  to = "/admin/config.yml"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
