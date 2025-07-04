@@ -135,11 +135,20 @@
     });
   </script>
 
-  <!-- Script pour redirection Netlify Identity confirmation -->
+  <!-- Script pour gérer le token de confirmation Netlify Identity -->
   <script>
-    if (window.location.pathname === "/.netlify/identity/confirm") {
-      window.location.replace("/confirmation-success");
-    }
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#invite_token=')) {
+        console.log('Token de confirmation détecté:', hash);
+
+        // Optionnel : nettoyer l'URL en retirant le hash pour avoir une URL propre
+        history.replaceState(null, null, window.location.pathname);
+
+        // Rediriger vers la page confirmation-success
+        window.location.replace('/confirmation-success');
+      }
+    });
   </script>
 
   <!-- Pied de page -->
