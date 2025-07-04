@@ -1,14 +1,14 @@
 backend:
   name: git-gateway
-  branch: main # ou master selon ton dépôt
+  branch: main
 
-media_folder: "assets/images" # dossier de destination des médias
+media_folder: "assets/images"
 public_folder: "/assets/images"
 
 media_library:
   name: uploadcare
   config:
-    publicKey: "demopublickey"  # clé publique de démonstration Uploadcare
+    publicKey: "demopublickey"
 
 collections:
   - name: "galerie"
@@ -17,7 +17,17 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Vidéo (lien)", name: "video", widget: "string", required: false }
-      - { label: "Texte", name: "body", widget: "markdown", required: false }
+      - label: "Titre"
+        name: "title"
+        widget: "string"
+      - label: "Image"
+        name: "image"
+        widget: "image"
+      - label: "Vidéo (lien)"
+        name: "video"
+        widget: "string"
+        required: false
+      - label: "Texte"
+        name: "body"
+        widget: "markdown"
+        required: false
