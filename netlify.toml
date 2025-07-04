@@ -1,5 +1,5 @@
 [build]
-  publish = "public"  # ou le dossier où se trouve ton site
+  publish = "."  # ou le dossier où se trouve ton site
 
 [[redirects]]
   from = "/admin/*"
