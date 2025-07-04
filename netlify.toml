@@ -1,5 +1,11 @@
 [build]
-  publish = "."  # ou le dossier où se trouve ton site
+  publish = "."
+
+[[redirects]]
+  from = "/admin/config.yml"
+  to = "/admin/config.yml"
+  status = 200
+  force = false
 
 [[redirects]]
   from = "/admin/*"
