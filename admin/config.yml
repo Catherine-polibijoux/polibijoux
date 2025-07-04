@@ -5,11 +5,6 @@ backend:
 media_folder: "assets/image"
 public_folder: "/assets/image"
 
-media_library:
-  name: uploadcare
-  config:
-    publicKey: "demopublickey"
-
 collections:
   - name: galerie
     label: Galerie
