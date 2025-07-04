@@ -135,6 +135,13 @@
     });
   </script>
 
+  <!-- Script pour redirection Netlify Identity confirmation -->
+  <script>
+    if (window.location.pathname === "/.netlify/identity/confirm") {
+      window.location.replace("/confirmation-success");
+    }
+  </script>
+
   <!-- Pied de page -->
   <footer>
     <div class="container">
