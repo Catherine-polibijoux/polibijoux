@@ -1,5 +1,4 @@
-[build]
-  publish = "public"  # Change ce dossier selon ton projet (ex: "dist" si tu utilises un build)
+
 
 [[redirects]]
   from = "/.netlify/identity/*"
