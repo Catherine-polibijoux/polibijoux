@@ -35,10 +35,10 @@
     /* Adaptations pour mobile */
     @media (max-width: 768px) {
       .logo-right img {
-        height: 70px;       /* Réduction taille logo */
+        height: 70px;
       }
       .logo-right {
-        top: 10%;           /* Remonter le logo */
+        top: 10%;
         transform: translateY(0);
       }
     }
@@ -141,12 +141,21 @@
       const hash = window.location.hash;
       if (hash.startsWith('#invite_token=')) {
         console.log('Token de confirmation détecté:', hash);
-
-        // Optionnel : nettoyer l'URL en retirant le hash pour avoir une URL propre
         history.replaceState(null, null, window.location.pathname);
-
-        // Rediriger vers la page confirmation-success
         window.location.replace('/confirmation-success');
+      }
+    });
+  </script>
+
+  <!-- Script pour rediriger automatiquement un lien de récupération de mot de passe -->
+  <script>
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#recovery_token=')) {
+        const token = hash.split('=')[1];
+        if (token) {
+          window.location.replace('/admin/#recovery_token=' + token);
+        }
       }
     });
   </script>
