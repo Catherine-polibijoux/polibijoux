@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poli Bijoux - Présentation</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: linear-gradient(200deg, black 0%, #b0b0b0 150%);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .presentation-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 10px auto 40px auto;
+      gap: 50px;
+    }
+
+    .presentation-text {
+      flex: 3;
+      padding: 15px;
+      line-height: 1.5;
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+
+    .presentation-text p {
+      margin-bottom: 1.2em;
+    }
+
+    .presentation-photos {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .presentation-photos img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul li a.active {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .logo-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .logo-right img {
+      height: 100px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .logo-right img {
+        height: 70px;
+      }
+      .logo-right {
+        top: 10%;
+        transform: translateY(0);
+      }
+    }
+
+    /* ✅ Nouveau : forcer la couleur du lien téléphone */
+    a[href^="tel"] {
+      color: #0af !important;
+      text-decoration: none;
+    }
+
+    a[href^="tel"]:visited {
+      color: #0af !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- En-tête avec navigation -->
+  <header>
+    <div class="container" style="position: relative;">
+      <div class="logo">
+        <a href="index.html">Poli Bijoux</a>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="presentation.html" class="active">Présentation</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="audit.html">Audit</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="en/index.html" class="lang-link">EN</a></li>
+          <li><a href="es/index.html" class="lang-link">ES</a></li>
+          <li><a href="ch/index.html" class="lang-link">CH</a></li>
+        </ul>
+      </nav>
+      <div class="logo-right" aria-label="Logo Poli Bijoux">
+        <a href="index.html">
+          <img src="assets/image/logo-site/logo.jpg" alt="Logo Poli Bijoux" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <section class="presentation-container">
+      <div class="presentation-text">
+        <p class="gold-title">Présentation</p>
+
+        <p>Depuis plus de 30 ans, <strong>Poli Bijoux</strong> incarne l’excellence du polissage en haute joaillerie.<br>
+        Artisan passionnée, je travaille pour les plus grandes maisons sur toutes les étapes de la création. J'apporte un soin du détail constant et une approche sur-mesure, fidèle à l’identité de chaque marque.</p>
+
+        <p class="gold-title">Pourquoi ce site ?</p>
+
+        <p>Ce site est né d’un désir de transmettre et valoriser un savoir-faire méconnu devenu métier rare : le polissage.<br>
+        Dans le souci de laisser une trace, d’aller à la rencontre des futurs artisans.</p>
+
+        <p class="gold-title">Ce que vous trouverez ici</p>
+
+        <ul>
+          <li>📸 <strong>Une galerie de photo</strong> : pour découvrir mon univers et présenter mon savoir-faire sous un autre angle</li>
+          <li>🎓 <strong>Des formations</strong> : pour les professionnels qui désirent former leur personnel avec de bonnes méthodes de travail afin d’améliorer leur production</li>
+          <li>🔑 <strong>Des workshops</strong> : pour apprendre à polir vos bijoux</li>
+          <li>🛠️ <strong>Des audits qualité</strong> : pour les entreprises afin de trouver des points d’amélioration pour la qualité du travail et la production. <br>
+            Proposition d’organisation, d’externalisation pour une production plus fluide</li>
+        </ul>
+
+        <p class="gold-title">Une vision du métier</p>
+
+        <p>J’ai voulu mettre ce métier en valeur avec une philosophie, un goût de l’esthétique.<br>
+        Chaque pièce doit accrocher la lumière et la renvoyer.<br>
+        Chaque geste doit porter et la main devient une partie de l’outil.</p>
+
+        <p class="gold-title">Une invitation</p>
+
+        <p>Que vous soyez artisan, maison de joaillerie ou professionnel curieux de mon univers, je vous invite à explorer ce site, découvrir mon savoir-faire, et me contacter pour toute demande ou collaboration.</p>
+
+        <p><strong>Poli Bijoux</strong>,<br>
+        Votre experte en polissage et en esthétique du bijou.</p>
+
+        <blockquote>« L'esthétique commence là où l’âme de l’artisan s’inscrit dans la matière. »</blockquote>
+      </div>
+
+      <div class="presentation-photos">
+        <img src="assets/image/photo-presentation/photo1.jpg" alt="Photo 1" />
+        <img src="assets/image/photo-presentation/photo2.jpg" alt="Photo 2" />
+        <img src="assets/image/photo-presentation/photo3.jpg" alt="Photo 3" />
+        <img src="assets/image/photo-presentation/photo4.jpg" alt="Photo 4" />
+        <img src="assets/image/photo-presentation/photo5.jpg" alt="Photo 5" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <p>
+        Contact : <a href="tel:+33661896713">+33 6 61 89 67 13</a> | 
+        <a href="mailto:polibijouxpro@gmail.com" style="color:#0af;">polibijouxpro@gmail.com</a> | 
+        <a href="confidentialite.html" style="color:#ccc;">Politique de confidentialité</a> | 
+        <a href="mentions.html" style="color:#ccc;">Mentions légales</a>
+      </p>
+      <p>&copy; 2025 Poli Bijoux. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll("#main-nav a");
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href.endsWith(currentPage)) {
+        link.classList.add("active");
+      }
+    });
+
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+    }
+
+    function getCookie(name) {
+      return document.cookie.split('; ').reduce((r, v) => {
+        const parts = v.split('=');
+        return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+      }, '');
+    }
+
+    window.addEventListener('load', () => {
+      const consent = getCookie('cookie_consent');
+      const banner = document.getElementById('cookie-banner');
+
+      if (consent === 'true') {
+        banner.style.display = 'none';
+      } else {
+        banner.style.display = 'block';
+      }
+
+      document.getElementById('accept-cookies').addEventListener('click', () => {
+        setCookie('cookie_consent', 'true', 365);
+        banner.style.display = 'none';
+      });
+    });
+  </script>
+
+  <!-- Bannière Cookies -->
+  <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; padding: 15px 20px; text-align: center; font-size: 0.9rem; z-index: 1000;">
+    Ce site utilise des cookies pour améliorer votre expérience. 
+    <button id="accept-cookies" style="background-color: #0af; color: #000; border: none; padding: 8px 15px; border-radius: 12px; cursor: pointer; margin-left: 15px;">Accepter</button>
+  </div>
+
+</body>
+</html>

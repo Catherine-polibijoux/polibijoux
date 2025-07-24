@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://catherine-polibijoux.github.io/polibijoux/sitemap.xml
