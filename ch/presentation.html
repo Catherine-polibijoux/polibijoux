@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poli Bijoux - 关于我们</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: linear-gradient(200deg, black 0%, #b0b0b0 150%);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .presentation-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 10px auto 40px auto;
+      gap: 50px;
+    }
+
+    .presentation-text {
+      flex: 3;
+      padding: 15px;
+      line-height: 1.5;
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+
+    .presentation-text p {
+      margin-bottom: 1.2em;
+    }
+
+    .presentation-photos {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .presentation-photos img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul li a.active {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .logo-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .logo-right img {
+      height: 100px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .logo-right img {
+        height: 70px;
+      }
+      .logo-right {
+        top: 10%;
+        transform: translateY(0);
+      }
+    }
+
+    a[href^="tel"] {
+      color: #0af !important;
+      text-decoration: none;
+    }
+
+    a[href^="tel"]:visited {
+      color: #0af !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container" style="position: relative;">
+      <div class="logo">
+        <a href="index.html">Poli Bijoux</a>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="presentation.html" class="active">关于我们</a></li>
+          <li><a href="galerie.html">画廊</a></li>
+          <li><a href="formations.html">培训项目</a></li>
+          <li><a href="audit.html">质量审计</a></li>
+          <li><a href="workshops.html">工作坊</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+          <li><a href="../en/index.html" class="lang-link">EN</a></li>
+          <li><a href="../es/index.html" class="lang-link">ES</a></li>
+          <li><a href="../index.html" class="lang-link">FR</a></li> <!-- Lien vers page accueil FR -->
+        </ul>
+      </nav>
+      <div class="logo-right" aria-label="Poli Bijoux Logo">
+        <a href="../index.html">
+          <img src="../assets/image/logo-site/logo.jpg" alt="Poli Bijoux Logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="presentation-container">
+      <div class="presentation-text">
+        <p class="gold-title">关于我们</p>
+
+        <p>30多年来，<strong>Poli Bijoux</strong> 一直代表着高级珠宝抛光的卓越品质。<br>
+        作为一名充满热情的工匠，我在创作的每一个阶段与最负盛名的品牌合作。始终关注细节，并根据每个品牌的身份提供个性化服务。</p>
+
+        <p class="gold-title">为什么建立这个网站？</p>
+
+        <p>本网站旨在传承并推广一项鲜为人知却日益稀缺的技艺：抛光。<br>
+        希望将这份遗产传递给未来的工匠。</p>
+
+        <p class="gold-title">你将在这里发现</p>
+
+        <ul>
+          <li>📸 <strong>图片画廊</strong>：展示我的世界与专业能力的另一面</li>
+          <li>🎓 <strong>培训项目</strong>：为专业人士提供高效工作方法的培训，以提升生产效率</li>
+          <li>🔑 <strong>工作坊</strong>：学习如何抛光你的珠宝</li>
+          <li>🛠️ <strong>质量审计</strong>：帮助企业识别质量与生产的改进空间<br>
+            提出关于组织与外包的建议，以优化生产流程</li>
+        </ul>
+
+        <p class="gold-title">职业的愿景</p>
+
+        <p>我希望以一种哲学和审美的方式来突出这门手艺。<br>
+        每一件作品都应捕捉并反射光线。<br>
+        每一个动作都应自然配合，手成为工具的一部分。</p>
+
+        <p class="gold-title">邀请函</p>
+
+        <p>无论你是工匠、珠宝公司或对这个世界感兴趣的专业人士，欢迎探索本站、了解我的专业背景，并与我联系以洽谈合作。</p>
+
+        <p><strong>Poli Bijoux</strong><br>
+        您的珠宝抛光与美学专家。</p>
+
+        <blockquote>“美感始于工匠之魂融入材质之时。”</blockquote>
+      </div>
+
+      <div class="presentation-photos">
+        <img src="../assets/image/photo-presentation/photo1.jpg" alt="照片 1" />
+        <img src="../assets/image/photo-presentation/photo2.jpg" alt="照片 2" />
+        <img src="../assets/image/photo-presentation/photo3.jpg" alt="照片 3" />
+        <img src="../assets/image/photo-presentation/photo4.jpg" alt="照片 4" />
+        <img src="../assets/image/photo-presentation/photo5.jpg" alt="照片 5" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        联系方式：<a href="tel:+33661896713">+33 6 61 89 67 13</a> | 
+        <a href="mailto:polibijouxpro@gmail.com" style="color:#0af;">polibijouxpro@gmail.com</a> | 
+        <a href="confidentialite.html" style="color:#ccc;">隐私政策</a> |
+        <a href="mentions.html" style="color:#ccc;">法律声明</a>
+      </p>
+      <p>&copy; 2025 Poli Bijoux. 保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script>
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll("#main-nav a");
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href.endsWith(currentPage)) {
+        link.classList.add("active");
+      }
+    });
+
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+    }
+
+    function getCookie(name) {
+      return document.cookie.split('; ').reduce((r, v) => {
+        const parts = v.split('=');
+        return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+      }, '');
+    }
+
+    window.addEventListener('load', () => {
+      const consent = getCookie('cookie_consent');
+      const banner = document.getElementById('cookie-banner');
+
+      if (consent === 'true') {
+        banner.style.display = 'none';
+      } else {
+        banner.style.display = 'block';
+      }
+
+      document.getElementById('accept-cookies').addEventListener('click', () => {
+        setCookie('cookie_consent', 'true', 365);
+        banner.style.display = 'none';
+      });
+    });
+  </script>
+
+  <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; padding: 15px 20px; text-align: center; font-size: 0.9rem; z-index: 1000;">
+    本网站使用 cookie 以改善您的浏览体验。
+    <button id="accept-cookies" style="background-color: #0af; color: #000; border: none; padding: 8px 15px; border-radius: 12px; cursor: pointer; margin-left: 15px;">接受</button>
+  </div>
+
+</body>
+</html>

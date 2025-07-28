@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>隐私政策 - Poli Bijoux</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    a {
+      color: #0af;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>隐私政策</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <p>最后更新：2025年6月18日</p>
+
+    <h2>1. 简介</h2>
+    <p>
+      在 <strong>Poli Bijoux</strong>，一家在 SIRET 编号 <strong>839 612 603</strong> 下注册的有限责任公司，我们非常重视您的个人数据隐私。本政策将告知您我们收集哪些数据、如何使用以及您的权利，符合《通用数据保护条例》(GDPR) 的规定。
+    </p>
+
+    <h2>2. 收集的数据</h2>
+    <p>我们仅收集绝对必要的数据：</p>
+    <ul>
+      <li>IP 地址（通过技术或分析类 cookie 收集，若启用）</li>
+      <li>通过联系表单提交的数据（姓名、电子邮件、留言）</li>
+    </ul>
+
+    <h2>3. Cookie 的使用</h2>
+    <p>
+      本网站使用 cookies 以改善您的用户体验。您可以在首次访问时通过弹窗接受或拒绝 cookies。默认只启用网站运行所必需的 cookies。
+    </p>
+
+    <h2>4. 处理目的</h2>
+    <ul>
+      <li>改善用户体验与浏览体验</li>
+      <li>回复通过联系表单发送的留言</li>
+      <li>进行匿名统计分析（若启用了分析工具）</li>
+    </ul>
+
+    <h2>5. 数据接收方</h2>
+    <p>
+      所收集的个人数据仅由 <strong>Poli Bijoux</strong> 处理。数据不会被出售、出租或与第三方共享，除非有法律义务。
+    </p>
+
+    <h2>6. 数据保留期限</h2>
+    <p>
+      收集的数据最多保留 12 个月，除非法律另有规定或您明确请求我们删除。
+    </p>
+
+    <h2>7. 您的权利</h2>
+    <p>根据 GDPR，您拥有以下权利：</p>
+    <ul>
+      <li>访问您的数据的权利</li>
+      <li>更正的权利</li>
+      <li>删除的权利（被遗忘权）</li>
+      <li>限制或反对处理的权利</li>
+      <li>随时撤回同意的权利</li>
+    </ul>
+    <p>
+      如需行使您的权利，可随时通过电子邮件联系我们：<a href="mailto:polibijouxpro@gmail.com">polibijouxpro@gmail.com</a>
+    </p>
+
+    <h2>8. 联系方式</h2>
+    <p>
+      若您对本政策或您的个人数据使用有任何疑问，请通过以下方式联系我们：
+      <a href="mailto:polibijouxpro@gmail.com">polibijouxpro@gmail.com</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="index.html">返回首页</a> |
+        <a href="mentions.html">法律声明</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Cookies 横幅 -->
+  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; padding: 15px 20px; text-align: center; font-size: 0.9rem; z-index: 1000;">
+    本网站使用 cookies 来提升您的使用体验。 
+    <button id="accept-cookies" style="background-color: #0af; color: #000; border: none; padding: 8px 15px; border-radius: 12px; cursor: pointer; margin-left: 15px;">接受</button>
+  </div>
+
+  <script>
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+    }
+
+    function getCookie(name) {
+      return document.cookie.split('; ').reduce((r, v) => {
+        const parts = v.split('=');
+        return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+      }, '');
+    }
+
+    window.addEventListener('load', () => {
+      const consent = getCookie('cookie_consent');
+      const banner = document.getElementById('cookie-banner');
+
+      if (consent === 'true') {
+        banner.style.display = 'none';
+      }
+
+      document.getElementById('accept-cookies').addEventListener('click', () => {
+        setCookie('cookie_consent', 'true', 365);
+        banner.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
