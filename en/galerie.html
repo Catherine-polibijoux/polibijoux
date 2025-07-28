@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poli Bijoux - Gallery</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background: linear-gradient(200deg, black 0%, #b0b0b0 150%);
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    nav ul li a.active {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #d4af37;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-item {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        gap: 20px;
+      }
+    }
+
+    .logo-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .logo-right img {
+      height: 100px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .logo-right img {
+        height: 70px;
+      }
+      .logo-right {
+        top: 10%;
+        transform: translateY(0);
+      }
+    }
+
+    a[href^="tel"] {
+      color: #0af !important;
+      text-decoration: none;
+    }
+
+    a[href^="tel"]:visited {
+      color: #0af !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container" style="position: relative;">
+      <div class="logo">
+        <a href="index.html">Poli Bijoux</a>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="presentation.html">About</a></li>
+          <li><a href="galerie.html" class="active">Gallery</a></li>
+          <li><a href="formations.html">Programs</a></li>
+          <li><a href="audit.html">Audit</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../index.html" class="lang-link">FR</a></li> <!-- Lien vers page accueil FR -->
+          <li><a href="../es/index.html" class="lang-link">ES</a></li>
+          <li><a href="../ch/index.html" class="lang-link">CH</a></li>
+        </ul>
+      </nav>
+      <div class="logo-right" aria-label="Poli Bijoux Logo">
+        <a href="index.html">
+          <img src="../assets/image/logo-site/logo.jpg" alt="Poli Bijoux Logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>Gallery</h1>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie1.jpg" alt="Photo 1"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie2.jpg" alt="Photo 2"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie3.jpg" alt="Photo 3"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie4.jpg" alt="Photo 4"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie5.jpg" alt="Photo 5"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie6.jpg" alt="Photo 6"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie7.jpg" alt="Photo 7"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie8.jpg" alt="Photo 8"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie9.jpg" alt="Photo 9"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie10.jpg" alt="Photo 10"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie11.jpg" alt="Photo 11"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie12.jpg" alt="Photo 12"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie13.jpg" alt="Photo 13"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie14.jpg" alt="Photo 14"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie15.jpg" alt="Photo 15"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie16.jpg" alt="Photo 16"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie17.jpg" alt="Photo 17"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie18.jpg" alt="Photo 18"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie19.jpg" alt="Photo 19"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie20.jpg" alt="Photo 20"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie21.jpg" alt="Photo 21"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie22.jpg" alt="Photo 22"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie23.jpg" alt="Photo 23"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie24.jpg" alt="Photo 24"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie25.jpg" alt="Photo 25"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie26.jpg" alt="Photo 26"></div>
+      <div class="gallery-item"><img src="../assets/image/photo-galerie/photogalerie27.jpg" alt="Photo 27"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        Contact: <a href="tel:+33661896713">+33 6 61 89 67 13</a> |
+        <a href="mailto:polibijouxpro@gmail.com" style="color:#0af;">polibijouxpro@gmail.com</a> |
+        <a href="confidentialite.html" style="color:#ccc;">Privacy Policy</a> |
+        <a href="mentions.html" style="color:#ccc;">Legal Notice</a>
+      </p>
+      <p>&copy; 2025 Poli Bijoux. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; padding: 15px 20px; text-align: center; font-size: 0.9rem; z-index: 1000;">
+    This site uses cookies to enhance your experience.
+    <button id="accept-cookies" style="background-color: #0af; color: #000; border: none; padding: 8px 15px; border-radius: 12px; cursor: pointer; margin-left: 15px;">Accept</button>
+  </div>
+
+  <script>
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll("#main-nav a");
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href.endsWith(currentPage)) {
+        link.classList.add("active");
+      }
+    });
+
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+    }
+
+    function getCookie(name) {
+      return document.cookie.split('; ').reduce((r, v) => {
+        const parts = v.split('=');
+        return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+      }, '');
+    }
+
+    window.addEventListener('load', () => {
+      const consent = getCookie('cookie_consent');
+      const banner = document.getElementById('cookie-banner');
+      if (consent === 'true') {
+        banner.style.display = 'none';
+      } else {
+        banner.style.display = 'block';
+      }
+
+      document.getElementById('accept-cookies').addEventListener('click', () => {
+        setCookie('cookie_consent', 'true', 365);
+        banner.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
