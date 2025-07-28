@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aviso Legal - Poli Bijoux</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #000;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    a {
+      color: #0af;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Aviso Legal</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Editor del sitio</h2>
+    <p>
+      Nombre de la empresa: <strong>Poli Bijoux</strong><br>
+      Forma jurídica: <strong>EURL</strong><br>
+      Número SIRET: <strong>839 612 603</strong><br>
+      Correo electrónico: <a href="mailto:polibijouxpro@gmail.com">polibijouxpro@gmail.com</a><br>
+    </p>
+
+    <h2>Alojamiento del sitio</h2>
+    <p>
+      Nombre: <strong>GitHub Pages</strong><br>
+      Sitio web: <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">https://pages.github.com</a><br>
+      Dirección: GitHub, Inc. – 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, EE. UU.
+    </p>
+
+    <h2>Propiedad intelectual</h2>
+    <p>
+      El contenido (textos, imágenes, diseño, logotipo) del sitio web de Poli Bijoux está protegido por derechos de autor. Queda prohibida toda reproducción o distribución sin autorización previa por escrito.
+    </p>
+
+    <h2>Responsabilidad</h2>
+    <p>
+      El editor del sitio declina toda responsabilidad en caso de errores u omisiones en el contenido publicado. El acceso al sitio puede ser interrumpido por mantenimiento sin previo aviso.
+    </p>
+
+    <h2>RGPD - Datos personales</h2>
+    <p>
+      No se recopilan datos personales sin su consentimiento. Para más información, consulte nuestra <a href="confidentialite.html">Política de Privacidad</a>.
+    </p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="index.html">Volver al inicio</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; padding: 15px 20px; text-align: center; font-size: 0.9rem; z-index: 1000;">
+    Este sitio utiliza cookies para mejorar tu experiencia. 
+    <button id="accept-cookies" style="background-color: #0af; color: #000; border: none; padding: 8px 15px; border-radius: 12px; cursor: pointer; margin-left: 15px;">Aceptar</button>
+  </div>
+
+  <script>
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+    }
+
+    function getCookie(name) {
+      return document.cookie.split('; ').reduce((r, v) => {
+        const parts = v.split('=');
+        return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+      }, '');
+    }
+
+    window.addEventListener('load', () => {
+      const consent = getCookie('cookie_consent');
+      const banner = document.getElementById('cookie-banner');
+
+      if (consent === 'true') {
+        banner.style.display = 'none';
+      }
+
+      document.getElementById('accept-cookies').addEventListener('click', () => {
+        setCookie('cookie_consent', 'true', 365);
+        banner.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>

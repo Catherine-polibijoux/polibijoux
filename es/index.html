@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poli Bijoux - Inicio</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background-image: url('../assets/image/photo-fond-acceuil/image1.jpg');
+    }
+
+    nav ul li a.active {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .logo-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .logo-right img {
+      height: 100px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .logo-right img {
+        height: 70px;
+      }
+      .logo-right {
+        top: 10%;
+        transform: translateY(0);
+      }
+    }
+
+    a[href^="tel"] {
+      color: #0af !important;
+      text-decoration: none;
+    }
+
+    a[href^="tel"]:visited {
+      color: #0af !important;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container" style="position: relative;">
+      <div class="logo">
+        <a href="index.html" class="active">Poli Bijoux</a>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="presentation.html">Acerca de</a></li>
+          <li><a href="galerie.html">Galería</a></li>
+          <li><a href="formations.html">Programas</a></li>
+          <li><a href="audit.html">Auditoría</a></li>
+          <li><a href="workshops.html">Talleres</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="../en/index.html" class="lang-link">EN</a></li>
+          <li><a href="../index.html" class="lang-link">FR</a></li> <!-- Lien vers page accueil FR -->
+          <li><a href="../ch/index.html" class="lang-link">CH</a></li>
+        </ul>
+      </nav>
+      <div class="logo-right" aria-label="Logo de Poli Bijoux">
+        <a href="index.html">
+          <img src="../assets/image/logo-site/logo.jpg" alt="Logo de Poli Bijoux" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <!-- El contenido de inicio va aquí -->
+      </div>
+    </section>
+  </main>
+
+  <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; padding: 15px 20px; text-align: center; font-size: 0.9rem; z-index: 1000;">
+    Este sitio utiliza cookies para mejorar su experiencia.
+    <button id="accept-cookies" style="background-color: #0af; color: #000; border: none; padding: 8px 15px; border-radius: 12px; cursor: pointer; margin-left: 15px;">Aceptar</button>
+  </div>
+
+  <script>
+    const currentPath = window.location.pathname.replace(/\/$/, '');
+    const navLinks = document.querySelectorAll("#main-nav a");
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href").replace(/\/$/, '');
+      if (href === currentPath) {
+        link.classList.add("active");
+      }
+    });
+
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+    }
+
+    function getCookie(name) {
+      return document.cookie.split('; ').reduce((r, v) => {
+        const parts = v.split('=');
+        return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+      }, '');
+    }
+
+    window.addEventListener('load', () => {
+      const consent = getCookie('cookie_consent');
+      const banner = document.getElementById('cookie-banner');
+
+      if (consent === 'true') {
+        banner.style.display = 'none';
+      } else {
+        banner.style.display = 'block';
+      }
+
+      document.getElementById('accept-cookies').addEventListener('click', () => {
+        setCookie('cookie_consent', 'true', 365);
+        banner.style.display = 'none';
+      });
+    });
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#invite_token=')) {
+        console.log('Token de confirmación detectado:', hash);
+        history.replaceState(null, null, window.location.pathname);
+        window.location.replace('/confirmation-success');
+      }
+    });
+  </script>
+
+  <script>
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#recovery_token=')) {
+        const token = hash.split('=')[1];
+        if (token) {
+          window.location.replace('/admin/#recovery_token=' + token);
+        }
+      }
+    });
+  </script>
+
+  <footer>
+    <div class="container">
+      <p>
+        Contacto: <a href="tel:+33661896713">+33 6 61 89 67 13</a> |
+        <a href="mailto:polibijouxpro@gmail.com" style="color:#0af;">polibijouxpro@gmail.com</a> |
+        <a href="confidentialite.html" style="color:#ccc;">Política de privacidad</a> |
+        <a href="mentions.html" style="color:#ccc;">Aviso legal</a>
+      </p>
+      <p>&copy; 2025 Poli Bijoux. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

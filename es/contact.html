@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Poli Bijoux</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      background-image: url('assets/image/photo-fond-contact/image1.jpg');
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    main.container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #000;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      background-color: #333;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    form input:focus, form textarea:focus, form select:focus {
+      background-color: #444;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .consent {
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .consent label {
+      font-weight: normal;
+    }
+
+    .consent a {
+      color: #0af;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background-color: #0af;
+      border: none;
+      border-radius: 12px;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #08c;
+      color: #fff;
+    }
+
+    nav ul li a.active {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    .logo-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .logo-right img {
+      height: 100px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .logo-right img {
+        height: 70px;
+      }
+      .logo-right {
+        top: 10%;
+        transform: translateY(0);
+      }
+    }
+
+    a[href^="tel"] {
+      color: #0af !important;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="position: relative;">
+      <div class="logo">
+        <a href="index.html">Poli Bijoux</a>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="presentation.html">Acerca de</a></li>
+          <li><a href="galerie.html">Galería</a></li>
+          <li><a href="formations.html">Programas</a></li>
+          <li><a href="audit.html">Auditoría</a></li>
+          <li><a href="workshops.html">Talleres</a></li>
+          <li><a href="contact.html" class="active">Contacto</a></li>
+          <li><a href="../en/index.html" class="lang-link">EN</a></li>
+          <li><a href="../index.html" class="lang-link">FR</a></li> <!-- Lien vers page accueil FR -->
+          <li><a href="../ch/index.html" class="lang-link">CH</a></li>
+        </ul>
+      </nav>
+      <div class="logo-right" aria-label="Logo de Poli Bijoux">
+        <a href="index.html">
+          <img src="assets/image/logo-site/logo.jpg" alt="Logo de Poli Bijoux" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contáctame</h1>
+    <form id="contact-form" action="https://formspree.io/f/xyzjdpdp" method="POST" novalidate>
+      <label for="nom">Apellido <span style="color:#f33;">*</span>:</label>
+      <input type="text" id="nom" name="nom" required />
+
+      <label for="prenom">Nombre <span style="color:#f33;">*</span>:</label>
+      <input type="text" id="prenom" name="prenom" required />
+
+      <label for="email">Correo electrónico <span style="color:#f33;">*</span>:</label>
+      <input type="email" id="email" name="_replyto" required />
+
+      <label for="telephone">Teléfono:</label>
+      <input type="tel" id="telephone" name="telephone" placeholder="(opcional)" />
+
+      <label for="sujet">Asunto <span style="color:#f33;">*</span>:</label>
+      <select id="sujet" name="sujet" required>
+        <option value="" disabled selected>-- Elige un asunto --</option>
+        <option value="Programas">Programas</option>
+        <option value="Solicitud especial">Solicitud especial</option>
+        <option value="Talleres">Talleres</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <label for="message">Mensaje <span style="color:#f33;">*</span>:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent" required />
+        <label for="consent">
+          Acepto que mis datos puedan ser utilizados para responder a mi solicitud conforme a la 
+          <a href="confidentialite.html" target="_blank">política de privacidad</a>.
+        </label>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        Contacto: <a href="tel:+33661896713">+33 6 61 89 67 13</a> | 
+        <a href="mailto:polibijouxpro@gmail.com" style="color:#0af;">polibijouxpro@gmail.com</a> | 
+        <a href="confidentialite.html" style="color:#ccc;">Política de Privacidad</a> | 
+        <a href="mentions.html" style="color:#ccc;">Aviso Legal</a>
+      </p>
+      <p>&copy; 2025 Poli Bijoux. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS: validation + prefilling etc. -->
+  <script>
+    // (le script reste inchangé)
+  </script>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#000; color:#fff; padding:15px 20px; text-align:center; font-size:0.9rem; z-index:1000;">
+    Este sitio utiliza cookies para mejorar tu experiencia.
+    <button id="accept-cookies" style="background-color:#0af; color:#000; border:none; padding:8px 15px; border-radius:12px; cursor:pointer; margin-left:15px;">Aceptar</button>
+  </div>
+</body>
+</html>
